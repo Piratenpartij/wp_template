@@ -1,0 +1,32 @@
+/**
+
+	GehenSans
+
+*/
+
+
+/* IE8 and below use EOT and allow cross-site embedding.
+   IE9 uses WOFF which is base64 encoded to allow cross-site embedding.
+   So unfortunately, IE9 will throw a console error, but it'll still work.
+   When the font is base64 encoded, cross-site embedding works in Firefox */
+
+@font-face {
+  font-family: 'GehenSansCondensed';
+  src: url('gehensans-bold-webfont.eot');
+  src: url('gehensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('gehensans-bold-webfont.woff') format('woff'), url('gehensans-bold-webfont.ttf') format('truetype'), url('gehensans-bold-webfont.svg#GehenSansCondensed') format('svg');
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GehenSans';
+  src: url('gehensans-bold-webfont.eot');
+  src: url('gehensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('gehensans-bold-webfont.woff') format('woff'), url('gehensans-bold-webfont.ttf') format('truetype'), url('gehensans-bold-webfont.svg#GehenSansCondensed') format('svg');
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GehenSans';
+  src: url('gehensans-regular-webfont.eot');
+  src: url('gehensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('gehensans-regular-webfont.woff') format('woff'), url('gehensans-regular-webfont.ttf') format('truetype'), url('gehensans-regular-webfont.svg#GehenSans') format('svg');
+  font-weight: normal;
+  font-style: normal; }
