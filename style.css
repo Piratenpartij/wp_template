@@ -1759,6 +1759,7 @@ body .ai1ec-agenda-widget-view h3.ai1ec-date-title {
 .site-content .secondary #widget-area {
 	font-size: 85%;
 	float:right;
+	width: 100%;
 }
 
 .site-content .secondary aside {
