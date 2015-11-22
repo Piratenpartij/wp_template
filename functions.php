@@ -441,14 +441,14 @@ class WijZijn_Widget extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		$content = '<ul>
-				<li><a href="https://programma.piratenpartij.nl/index.php?title=Burgerparticipatie_en_open_overheid">Burgerparticipatie en open overheid</a></li>
-				<li><a href="https://programma.piratenpartij.nl/index.php?title=Transparantie">Transparantie</a></li>
-				<li><a href="https://programma.piratenpartij.nl/index.php?title=Privacy_en_burgerrechten">Privacy en burgerrechten</a></li>
-				<li><a href="https://programma.piratenpartij.nl/index.php?title=Auteursrecht">Auteursrecht</a></li>
-				<li><a href="https://programma.piratenpartij.nl/index.php?title=Vrijheid_van_informatie_en_onderwijs">Vrijheid van informatie en onderwijs</a></li>
-				<li><a href="https://programma.piratenpartij.nl/index.php?title=Patenten">Patenten</a></li>
-				<li><a href="https://programma.piratenpartij.nl/index.php?title=Internationale_Handel">Internationale handel</a></li>
-				<li><a href="https://programma.piratenpartij.nl/index.php?title=Net-politiek">Net-politiek</a></li>
+				<li><a href="https://programma.piratenpartij.nl/burgerparticipatie_en_open_overheid">Burgerparticipatie en open overheid</a></li>
+				<li><a href="https://programma.piratenpartij.nl/transparantie">Transparantie</a></li>
+				<li><a href="https://programma.piratenpartij.nl/privacy_en_burgerrechten">Privacy en burgerrechten</a></li>
+				<li><a href="https://programma.piratenpartij.nl/auteursrecht">Auteursrecht</a></li>
+				<li><a href="https://programma.piratenpartij.nl/vrijheid_van_informatie_en_onderwijs">Vrijheid van informatie en onderwijs</a></li>
+				<li><a href="https://programma.piratenpartij.nl/patenten">Patenten</a></li>
+				<li><a href="https://programma.piratenpartij.nl/internationale_handel">Internationale handel</a></li>
+				<li><a href="https://programma.piratenpartij.nl/net-politiek">Net-politiek</a></li>
 			</ul>';
 
 		if (!empty($instance['content']) && !in_array(trim($instance['content']),array('','<p></p>','<br>','<br />','<br/>'))) {
