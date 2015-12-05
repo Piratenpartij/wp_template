@@ -3348,3 +3348,17 @@ p > video {
 		padding: 3.84615% 0;
 	}
 }
+
+input[name=payment_method] {
+        float: left;
+}
+
+
+div#payment > ul.payment_methods > li {
+	margin-top: 20px !important;
+}
+
+input[type="radio"] {
+  margin-top: 5px !important;
+  vertical-align: middle;
+}

@@ -17,6 +17,7 @@ get_header(); ?>
 		// Start the loop.
 		woocommerce_content();
 		?>
+		<a target="_blank" href="<?php echo esc_url( wc_get_page_permalink( 'terms' ) ); ?>" title="Piratenpartij Nederland Webshop Algemene Voorwaarden">Algemene Voorwaarden</a>
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
 <?php get_footer(); ?>
