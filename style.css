@@ -2861,6 +2861,50 @@ a.post-thumbnail:focus {
 }
 
 /**
+ * 12.4 Calendar 
+*/
+
+.ai1ec-agenda-widget-view .ai1ec-month,
+.ai1ec-agenda-view .ai1ec-month,
+.ai1ec-month-view .ai1ec-allday .ai1ec-event,
+.ai1ec-month-view .ai1ec-multiday .ai1ec-event,
+.ai1ec-week-view .ai1ec-allday-events .ai1ec-allday .ai1ec-event,
+.ai1ec-week-view .ai1ec-allday-events .ai1ec-multiday .ai1ec-event,
+.ai1ec-oneday-view .ai1ec-allday-events .ai1ec-allday .ai1ec-event,
+.ai1ec-oneday-view .ai1ec-allday-events .ai1ec-multiday .ai1ec-event,
+.ai1ec-allday-badge {
+  background-color: #572b85 !important;
+}
+
+.ai1ec-month-view .ai1ec-today,
+.ai1ec-week-view .ai1ec-today {
+  background-color: #f2ecf9 !important;
+}
+
+.ai1ec-agenda-widget-view .ai1ec-event a,
+.ai1ec-popup a,
+.ai1ec-main-container a,
+.ai1ec-single-event a,
+.leaflet-container a,
+.entry-content .timely a,
+.comment-content .timely a,
+.site-footer .widget .timely a {
+  color: #876fa1 !important;
+}
+
+.ai1ec-agenda-widget-view .ai1ec-event a:hover,
+.ai1ec-popup a:hover,
+.ai1ec-main-container a:hover,
+.ai1ec-single-event a:hover,
+.leaflet-container a:hover,
+.entry-content .timely a:hover,
+.comment-content .timely a:hover,
+.site-footer .widget .timely a:hover {
+  color: #572b85 !important;
+}
+
+
+/**
  * 13.0 Footer
  */
 
