@@ -1,0 +1,397 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Piratenpartij Nederland Wordpress\n"
+"POT-Creation-Date: 2016-05-16 18:25+0200\n"
+"PO-Revision-Date: 2016-05-16 18:28+0200\n"
+"Last-Translator: \n"
+"Language-Team: ICT <ict@piratenpartij.nl>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ppnl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oeps! Die pagina kan niet gevonden worden."
+
+#: 404.php:21
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+"Het lijkt erop dat op deze locatie niets meer is te vinden. Misschien helpt "
+"het om gebruik te maken van de zoekfunctie?"
+
+#: archive.php:49 search.php:38
+msgid "Previous page"
+msgstr "Vorige pagina"
+
+#: archive.php:50 search.php:39
+msgid "Next page"
+msgstr "Volgende pagina"
+
+#: archive.php:51 content-link.php:40 content-page.php:26 content.php:47
+#: image.php:63 search.php:40
+msgid "Page"
+msgstr "Pagina"
+
+#: author-bio.php:21
+msgid "Published on"
+msgstr "Gepubliceerd op"
+
+#: author-bio.php:22
+msgid "by"
+msgstr "door"
+
+#: author-bio.php:28
+#, php-format
+msgid "Show all articles for %s"
+msgstr "Toon alle artikelen voor %s"
+
+#: author-bio.php:36
+msgid "Leave comment"
+msgstr "Laat een reactie achter"
+
+#: author-bio.php:37
+msgid "comment"
+msgstr "reactie"
+
+#: author-bio.php:38
+msgid "comments"
+msgstr "reacties"
+
+#: author-bio.php:44 content-link.php:56 content-page.php:31
+#: content-search.php:28 content-search.php:33 image.php:71
+msgid "Edit"
+msgstr "Bewerken"
+
+#: comments.php:53
+msgid "Comments are closed."
+msgstr "Reacties zijn niet meer toegestaan"
+
+#: content-link.php:31 content.php:35 functions.php:382
+#, php-format
+msgid "Continue reading %s"
+msgstr "Lees verder over %s"
+
+#: content-link.php:36 content-page.php:22 content.php:43 image.php:59
+msgid "Pages"
+msgstr "Paginas"
+
+#: content-none.php:15
+msgid "Nothing Found"
+msgstr "Niets gevonden"
+
+#: content-none.php:22
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Klaar om je eerste post te maken? <a href=“%1$s”>Start hier</a>."
+
+#: content-none.php:26
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Helaas is er niets gevonden met jou zoek woorden. Probeer het nog een keer "
+"met andere zoek woorden."
+
+#: content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Het lijkt er op dat wij niet kunnen vinden wat je zoekt. Misschien kan de "
+"zoeken helpen."
+
+#: content.php:57 inc/template-tags.php:141 inc/template-tags.php:149
+msgid ", "
+msgstr ", "
+
+#: content.php:59
+#, php-format
+msgid "Published in %1$s."
+msgstr "Gepubliceerd in %1$s."
+
+#: content.php:60
+msgid "Tagged"
+msgstr "Tagged"
+
+#: footer.php:24
+msgid "https://wordpress.org/"
+msgstr "https://wordpress.org/"
+
+#: footer.php:24
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Powered by %s"
+
+#: functions.php:89
+msgid "Primary Menu"
+msgstr "Hoofdmenu"
+
+#: functions.php:137
+msgid "Widget Header"
+msgstr "Widget hoofd"
+
+#: functions.php:139
+msgid "Add widgets here to appear in your header at the right side."
+msgstr "Voeg hier widgets in de header aan de rechterkant van de site."
+
+#: functions.php:147
+msgid "Widget Side bar right"
+msgstr "Widgets ruimte rechts"
+
+#: functions.php:149
+msgid "Add widgets here to appear on the right side."
+msgstr "Voeg hier widgets toe voor de rechterkant van de site."
+
+#: functions.php:199
+msgid "expand child menu"
+msgstr "klap menu uit"
+
+#: functions.php:200
+msgid "collapse child menu"
+msgstr "klap menu in"
+
+#: functions.php:383
+msgid "Continue reading"
+msgstr "Lees verder"
+
+#: functions.php:432 functions.php:462
+msgid "We are"
+msgstr "Wij zijn"
+
+#: functions.php:433
+msgid "We Are widget"
+msgstr "Wij zijn widget"
+
+#: functions.php:462
+msgid "a political partij with main goals"
+msgstr "een politieke beweging met de kernpunten"
+
+#: functions.php:477
+msgid "Leave the field empty to show the default tekst"
+msgstr "Laat onderstaande veld leeg om de landelijke standaard tekst te tonen"
+
+#: functions.php:478
+msgid "Content"
+msgstr "Tekst"
+
+#: header.php:29
+msgid "Skip to content"
+msgstr "Ga naar de tekst"
+
+#: image.php:24
+msgid "Previous Image"
+msgstr "Vorige plaatje"
+
+#: image.php:24
+msgid "Next Image"
+msgstr "Volgende plaatje"
+
+#: image.php:84
+msgid ""
+"<span class=\"meta-nav\">Published in</span><span class=\"post-title\">"
+"%title</span>"
+msgstr ""
+"<span class=“meta-nav”>Gepubliseerd in</span><span class=“post-title”>"
+"%title</span>"
+
+#: inc/back-compat.php:37 inc/back-compat.php:47 inc/back-compat.php:60
+#, php-format
+msgid ""
+"Piratenpartij Nederland requires at least WordPress version 4.1. You are "
+"running version %s. Please upgrade and try again."
+msgstr ""
+"Piratenpartij Nederland heeft minimaal Wordpress versie 4.1. Er wordt "
+"gebruik gemaakt van %s. Upgrade je Wordpress eerst."
+
+#: inc/custom-header.php:45 inc/custom-header.php:47
+msgid "Promotion banners"
+msgstr "Promotie banners"
+
+#: inc/custom-header.php:46 inc/custom-header.php:60
+msgid "Promotion banner"
+msgstr "Promotie banner"
+
+#: inc/custom-header.php:48 inc/custom-header.php:93
+msgid "Parent"
+msgstr "Bovenliggend"
+
+#: inc/custom-header.php:49
+msgid "All promotion banners"
+msgstr "Alle promotie banners"
+
+#: inc/custom-header.php:50
+msgid "View promotion banner"
+msgstr "Bekijk promotie banner"
+
+#: inc/custom-header.php:51
+msgid "Add new promotion banner"
+msgstr "Voeg een nieuwe promotie banner toe"
+
+#: inc/custom-header.php:52
+msgid "New promotion banner"
+msgstr "Nieuw promotie banner"
+
+#: inc/custom-header.php:53
+msgid "Edit promotion banner"
+msgstr "Wijzig promotie banner"
+
+#: inc/custom-header.php:54
+msgid "Update promotion banner"
+msgstr "Update promotie banner"
+
+#: inc/custom-header.php:55
+msgid "Search promotion banners"
+msgstr "Zoek promotie banners"
+
+#: inc/custom-header.php:56
+msgid "No promotion banners found"
+msgstr "Geen promotie banners gevonden"
+
+#: inc/custom-header.php:57
+msgid "No promotion banners found in Trash"
+msgstr "Geen promotie banners gevonden in de prullenbak"
+
+#: inc/custom-header.php:61
+msgid "Promotion banners on the frontpage"
+msgstr "Promotie banners op de voorpagina"
+
+#: inc/custom-header.php:90 inc/custom-header.php:91 inc/custom-header.php:105
+msgid "Newsletter item"
+msgstr "Nieuwsbrief item"
+
+#: inc/custom-header.php:92
+msgid "Newsletter items"
+msgstr "Nieuwsbrief items"
+
+#: inc/custom-header.php:94
+msgid "All newsletter items"
+msgstr "All nieuwsbrief item"
+
+#: inc/custom-header.php:95
+msgid "View newsletter item"
+msgstr "Bekijk nieuwsbrief item"
+
+#: inc/custom-header.php:96
+msgid "Add new newsletter item"
+msgstr "Voeg een nieuw nieuwsbrief item toe"
+
+#: inc/custom-header.php:97
+msgid "New newsletter item"
+msgstr "Nieuw nieuwsbrief item"
+
+#: inc/custom-header.php:98
+msgid "Edit newsletter item"
+msgstr "Wijzig nieuwsbrief item"
+
+#: inc/custom-header.php:99
+msgid "Update newsletter item"
+msgstr "Update nieuwsbrief item"
+
+#: inc/custom-header.php:100
+msgid "Search newsletter items"
+msgstr "Zoek nieuwsbrief items"
+
+#: inc/custom-header.php:101
+msgid "No newsletter items found"
+msgstr "Geen nieuwsbrief items gevonden"
+
+#: inc/custom-header.php:102
+msgid "No newsletter items found in trash"
+msgstr "Geen nieuwsbrief items gevonden in de prullenbak"
+
+#: inc/custom-header.php:106
+msgid ""
+"Newsletter items for use with the <a href=\"http://www.thenewsletterplugin."
+"com/\" target=\"_blank\">newsletter plugin</a>"
+msgstr ""
+"Nieuwsbrief items voor het gebruik met de <a href=“http://www."
+"thenewsletterplugin.com/“ target=“_blank”>newsletter plugin</a>"
+
+#: inc/customizer.php:27
+msgid "Applied to the header on small screens and the sidebar on wide screens."
+msgstr ""
+"Applied to the header on small screens and the sidebar on wide screens."
+
+#: inc/template-tags.php:73
+msgid "Comment navigation"
+msgstr "Reactie navigatie"
+
+#: inc/template-tags.php:76
+msgid "Older Comments"
+msgstr "Oude reacties"
+
+#: inc/template-tags.php:80
+msgid "Newer Comments"
+msgstr "Nieuwe reacties"
+
+#: inc/template-tags.php:99
+msgid "Featured"
+msgstr "Uitgelicht"
+
+#: inc/template-tags.php:105
+msgid "Format"
+msgstr "Formaat"
+
+#: inc/template-tags.php:126
+msgid "Posted on"
+msgstr "Geplaatst op"
+
+#: inc/template-tags.php:135
+msgid "Author"
+msgstr "Schrijver"
+
+#: inc/template-tags.php:144
+msgid "Categories"
+msgstr "Categorien"
+
+#: inc/template-tags.php:152
+msgid "Tags"
+msgstr "Tags"
+
+#: inc/template-tags.php:163
+msgid "Full size"
+msgstr "Volledige formaat"
+
+#: inc/template-tags.php:172
+msgid "Leave a comment"
+msgstr "Laat een reactie achter"
+
+#: inc/template-tags.php:172
+msgid "1 Comment"
+msgstr "1 Reactie"
+
+#: inc/template-tags.php:172
+msgid "% Comments"
+msgstr "% Reacties"
+
+#: plugins/login-with-ajax/ppnl/widget_in.php:13
+msgid "Hi"
+msgstr "Hoi"
+
+#: search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Zoek resultaten voor: %s"
+
+#: single-ai1ec_event.php:97 single.php:32
+msgid "Next"
+msgstr "Volgende"
+
+#: single-ai1ec_event.php:98 single.php:33
+msgid "Next post"
+msgstr "Volgende bericht"
+
+#: single-ai1ec_event.php:100 single.php:35
+msgid "Previous"
+msgstr "Vorige"
+
+#: single-ai1ec_event.php:101 single.php:36
+msgid "Previous post"
+msgstr "Vorige bericht"
