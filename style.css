@@ -1567,15 +1567,15 @@ body .ai1ec-agenda-widget-view h3.ai1ec-date-title {
 }
 
 /**
- * Uitgelicht
+ * Promotion Banners
  */
 
-.uitgelicht {
+.promotion {
  	width: 100%;
  	height: 8em;
 }
 
-.uitgelicht .item {
+.promotion .item {
  	float: left;
  	width: 32%;
  	height: 100%;
@@ -1591,15 +1591,15 @@ body .ai1ec-agenda-widget-view h3.ai1ec-date-title {
  	overflow: hidden;
 }
 
-.uitgelicht .item:first-child {
+.promotion .item:first-child {
 	margin-left: 0px;
 }
 
-.uitgelicht .item:last-child {
+.promotion .item:last-child {
 	margin-right: 0px;
 }
 
-.uitgelicht .item img {
+.promotion .item img {
 	position: absolute;
 	z-index: 1;
 	top: 0px;
@@ -1609,7 +1609,7 @@ body .ai1ec-agenda-widget-view h3.ai1ec-date-title {
 	min-width: 100%;
 }
 
-.uitgelicht .item .content {
+.promotion .item .content {
 	position: absolute;
         display: table;
 	top: 0px;
@@ -1622,7 +1622,7 @@ body .ai1ec-agenda-widget-view h3.ai1ec-date-title {
 	white-space: nowrap;
 }
 
-.uitgelicht .item .content span {
+.promotion .item .content span {
     display: table-cell;
     width: 100%;
     height: 100%;
@@ -1630,11 +1630,11 @@ body .ai1ec-agenda-widget-view h3.ai1ec-date-title {
     text-align: center;
 }
 
-.uitgelicht .item .content span p {
+.promotion .item .content span p {
   margin-bottom: 0em;;
 }
 
-.uitgelicht .item a {
+.promotion .item a {
   display: inline-block;
   *display: inline;
   padding: 0.3em 1.3em;
@@ -1654,8 +1654,8 @@ body .ai1ec-agenda-widget-view h3.ai1ec-date-title {
           box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.uitgelicht .item a:hover,
-.uitgelicht .item a:focus {
+.promotion .item a:hover,
+.promotion .item a:focus {
   text-decoration: none;
   background-position: 0 -15px;
   -webkit-transition: background-position 0.1s linear;
@@ -1664,14 +1664,14 @@ body .ai1ec-agenda-widget-view h3.ai1ec-date-title {
           transition: background-position 0.1s linear;
 }
 
-.uitgelicht .item a:focus {
+.promotion .item a:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 
-.uitgelicht .item a.active,
-.uitgelicht .item a:active {
+.promotion .item a.active,
+.promotion .item a:active {
   background-image: none;
   outline: 0;
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -1679,7 +1679,7 @@ body .ai1ec-agenda-widget-view h3.ai1ec-date-title {
           box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.uitgelicht .item a {
+.promotion .item a {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
   text-decoration: none;
   color: #ffffff;
@@ -1697,19 +1697,19 @@ body .ai1ec-agenda-widget-view h3.ai1ec-date-title {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 
-.uitgelicht .item a:hover,
-.uitgelicht .item a:focus,
-.uitgelicht .item a:active,
-.uitgelicht .item a.active,
-.uitgelicht .item a.disabled,
-.uitgelicht .item a[disabled] {
+.promotion .item a:hover,
+.promotion .item a:focus,
+.promotion .item a:active,
+.promotion .item a.active,
+.promotion .item a.disabled,
+.promotion .item a[disabled] {
   color: #ffffff;
   background-color: #3F1D63;
   *background-color: #3F1D63;
   }
 
-.uitgelicht .item a:active,
-.uitgelicht .item a.active {
+.promotion .item a:active,
+.promotion .item a.active {
   background-color: #2e3799 \9;
 }
 
@@ -3253,7 +3253,7 @@ p > video {
 		display: none;
 	}
 
-	.uitgelicht {
+	.promotion {
 		display: none;
 	}
 }

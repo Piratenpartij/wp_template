@@ -18,7 +18,7 @@
         }
 
         // Variable width uitgelichte banners
-        var uitgelichtebanners = jQuery('.uitgelicht > .item');
+        var uitgelichtebanners = jQuery('.promotion > .item');
         var bannersizes = [];
     	switch (uitgelichtebanners.length) {
 			case 1:

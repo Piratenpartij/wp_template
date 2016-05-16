@@ -18,17 +18,17 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<?php if ( is_home() && is_front_page() ) : ?>
 				<?php
-				    $uitgelichte_banners = new WP_Query( array(
-				      	'post_type' => 'uitgelicht',
+				    $promotion_banners = new WP_Query( array(
+				      	'post_type' => 'promo',
 				      	'orderby' => 'menu_order',
 						'order'   => 'ASC',
 						'posts_per_page' => 3,
 				    ) );
-				    if( $uitgelichte_banners->have_posts() ) : ?>
-				    <div class="uitgelicht">
+				    if( $promotion_banners->have_posts() ) : ?>
+				    <div class="promotion">
 				    <?php
-				      while( $uitgelichte_banners->have_posts() ) {
-				        $uitgelichte_banners->the_post();
+				      while( $promotion_banners->have_posts() ) {
+				        $promotion_banners->the_post();
 				        ?>
 				        <div class="item">
 			        	  <?php the_post_thumbnail('full'); ?>
