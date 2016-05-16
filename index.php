@@ -31,9 +31,11 @@ get_header(); ?>
 				        $uitgelichte_banners->the_post();
 				        ?>
 				        <div class="item">
-				        	<?php the_post_thumbnail('full'); ?>
-				          	<div class='content'>
+			        	  <?php the_post_thumbnail('full'); ?>
+				            <div class='content'>
+                                              <span class="middle">
 				              <?php the_content() ?>
+                                              </span>
 				            </div>
 				        </div>
 				        <?php

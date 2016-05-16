@@ -40,7 +40,7 @@
 			};
 
 			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'ppnl' ) . '</span>',
+				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages', 'ppnl' ) . ':</span>',
 				'after'       => '</div>',
 				'link_before' => '<span>',
 				'link_after'  => '</span>',
@@ -56,7 +56,7 @@
 		if ( 'post' == get_post_type()) { // Hide category text for pages on Search
 			$categories_list = get_the_category_list( _x( ', ', 'used between list items, there is a space after the comma', 'ppnl' ) );
 			if ( $categories_list)
-				printf( '<span class="cat-links block">' . __( 'Gepubliceerd in %1$s.', 'ppnl' ) . '</span>', $categories_list );
+				printf( '<span class="cat-links block">' . __( 'Published in %1$s.', 'ppnl' ) . '</span>', $categories_list );
 			the_tags( '<span class="tag-links block">' . __( 'Tagged', 'ppnl' ) . ' ', ', ' , '</span>');
 		}
 		?>

@@ -312,7 +312,7 @@ pre {
   margin: 0 0 10px;
   font-size: 13px;
   line-height: 20px;
-  word-break: break-all;
+/*  word-break: break-all;*/
   word-wrap: break-word;
   white-space: pre;
   white-space: pre-wrap;
@@ -1611,15 +1611,27 @@ body .ai1ec-agenda-widget-view h3.ai1ec-date-title {
 
 .uitgelicht .item .content {
 	position: absolute;
+        display: table;
 	top: 0px;
 	left: 0px;
 	z-index: 2;
 	width: 100%;
 	height: 100%;
-	padding-top: 0.9em;
 	line-height: 2.1em;
 	font-size: 0.95em;
 	white-space: nowrap;
+}
+
+.uitgelicht .item .content span {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align:middle;
+    text-align: center;
+}
+
+.uitgelicht .item .content span p {
+  margin-bottom: 0em;;
 }
 
 .uitgelicht .item a {
@@ -1801,7 +1813,7 @@ body .ai1ec-agenda-widget-view h3.ai1ec-date-title {
   font-family: "Droid Sans",arial,helvetica,geneva,tahoma,georgia,verdana,sans-serif,courier;
 }
 
-.site-content .secondary .widget_wijzijn_widget {
+.site-content .secondary .widget_weare_widget {
   background-image: linear-gradient(top, #876FA1, #572B85);
   background-image: -moz-linear-gradient(top, #876FA1, #572B85);
   background-image: -ms-linear-gradient(top, #876FA1, #572B85);
@@ -1815,20 +1827,20 @@ body .ai1ec-agenda-widget-view h3.ai1ec-date-title {
   margin-top: 1em;
 }
 
-.site-content .secondary .widget_wijzijn_widget span {
+.site-content .secondary .widget_weare_widget span {
   font-size: 1.5em;
   font-weight: bold;
 }
 
-.site-content .secondary .widget_wijzijn_widget ul li {
+.site-content .secondary .widget_weare_widget ul li {
   background-image: url('images/icon_white_pirate.png');
 }
 
-.site-content .secondary .widget_wijzijn_widget ul li a{
+.site-content .secondary .widget_weare_widget ul li a{
   color: #ddf;
 }
 
-.site-content .secondary .widget_wijzijn_widget ul li a:hover {
+.site-content .secondary .widget_weare_widget ul li a:hover {
   color: #ddf;
   text-decoration: underline;
 }

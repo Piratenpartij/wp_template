@@ -10,11 +10,34 @@
 	    bottom = false, windowWidth, windowHeight, lastWindowPos = 0,
 	    topOffset = 0, bodyHeight, sidebarHeight, resizeTimer;
 
-	// Overwrite the Wij zijn blok
-        if (jQuery('ul.wij-zijn').length == 1) {
-	    var overwriteHTML = jQuery('ul.wij-zijn');
-	    jQuery('aside#we-are ul').html(overwriteHTML.html());
-	    overwriteHTML.parent().parent().hide();
+	// Overwrite the WeAre block
+        if (jQuery('ul.we-are').length == 1) {
+	    	var overwriteHTML = jQuery('ul.we-are');
+	    	jQuery('aside#we-are ul').html(overwriteHTML.html());
+	    	overwriteHTML.parent().parent().hide();
+        }
+
+        // Variable width uitgelichte banners
+        var uitgelichtebanners = jQuery('.uitgelicht > .item');
+        var bannersizes = [];
+    	switch (uitgelichtebanners.length) {
+			case 1:
+				bannersizes = [100];
+		        break;
+		    case 2:
+		        bannersizes = [49,49];
+		        break;
+
+		    case 3:
+		  		bannersizes = [32,32,32];
+			break;
+			case 4:
+				bannersizes = [32,32,32,100];
+			break;
+		}
+
+        for (var i = 0 ; i < uitgelichtebanners.length; i++) {
+          jQuery(uitgelichtebanners[i]).css('width',bannersizes[i] + '%');
         }
 
 	// Add dropdown toggle that display child menu items.
@@ -29,7 +52,7 @@
 		_this.html( _this.html() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
 	} );
 
-	$('#menu-hoofdmenu').slimmenu({
+	$('#site-navigation ul.slimmenu').slimmenu({
 	    resizeWidth: '750',
 	    collapserTitle: 'Menu',
 	    animSpeed: 0,
@@ -124,7 +147,7 @@
 	}
 
 	function addDonateButtonToMenu() {
-		var menu = $('#site-navigation #menu-hoofdmenu');
+		var menu = $('#site-navigation > ul');
 		menu.prepend($('<li>').addClass('mobile').html($('#secondary .join-donate span.orange').clone()));
 		menu.prepend($('<li>').addClass('mobile').html($('#secondary .join-donate span.red').clone()));
 	}

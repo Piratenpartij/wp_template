@@ -42,23 +42,23 @@ if ( ! function_exists('ppnl_promotion_type') ) {
 	function ppnl_promotion_type() {
 
 		$labels = array(
-			'name'                => _x( 'Uitgelichte banners', 'Post Type General Name', 'ppnl' ),
-			'singular_name'       => _x( 'Uitgelichte banner', 'Post Type Singular Name', 'ppnl' ),
-			'menu_name'           => __( 'Uitgelichte banners', 'ppnl' ),
-			'parent_item_colon'   => __( 'Parent....', 'ppnl' ),
-			'all_items'           => __( 'Alle uitgelichte banners', 'ppnl' ),
-			'view_item'           => __( 'Bekijk uitgelicht banner', 'ppnl' ),
-			'add_new_item'        => __( 'Add New uitgelicht banner', 'ppnl' ),
-			'add_new'             => __( 'New uitgelicht banner', 'ppnl' ),
-			'edit_item'           => __( 'Edit uitgelicht banner', 'ppnl' ),
-			'update_item'         => __( 'Update uitgelicht banner', 'ppnl' ),
-			'search_items'        => __( 'Search uitgelicht banners', 'ppnl' ),
-			'not_found'           => __( 'Geen uitgelicht banners gevonden', 'ppnl' ),
-			'not_found_in_trash'  => __( 'Geen uitgelicht banners gevonden in Trash', 'ppnl' ),
+			'name'                => _x( 'Promotion banners', 'Post Type General Name', 'ppnl' ),
+			'singular_name'       => _x( 'Promotion banner', 'Post Type Singular Name', 'ppnl' ),
+			'menu_name'           => __( 'Promotion banners', 'ppnl' ),
+			'parent_item_colon'   => __( 'Parent', 'ppnl' ),
+			'all_items'           => __( 'All promotion banners', 'ppnl' ),
+			'view_item'           => __( 'View promotion banner', 'ppnl' ),
+			'add_new_item'        => __( 'Add new promotion banner', 'ppnl' ),
+			'add_new'             => __( 'New promotion banner', 'ppnl' ),
+			'edit_item'           => __( 'Edit promotion banner', 'ppnl' ),
+			'update_item'         => __( 'Update promotion banner', 'ppnl' ),
+			'search_items'        => __( 'Search promotion banners', 'ppnl' ),
+			'not_found'           => __( 'No promotion banners found', 'ppnl' ),
+			'not_found_in_trash'  => __( 'No promotion banners found in Trash', 'ppnl' ),
 		);
 		$args = array(
-			'label'               => __( 'Uitgelichte_banner', 'ppnl' ),
-			'description'         => __( 'Uitgelichte blokken op de voorpagina', 'ppnl' ),
+			'label'               => __( 'Promotion banner', 'ppnl' ),
+			'description'         => __( 'Promotion banners on the frontpage', 'ppnl' ),
 			'labels'              => $labels,
 			'supports'            => array( 'title', 'editor', 'thumbnail', 'page-attributes', ),
 			'hierarchical'        => false,
@@ -74,7 +74,7 @@ if ( ! function_exists('ppnl_promotion_type') ) {
 			'publicly_queryable'  => true,
 			'capability_type'     => 'page',
 		);
-		register_post_type( 'uitgelicht', $args );
+		register_post_type( 'promo', $args );
 
 	}
 	// Hook into the 'init' action
@@ -87,23 +87,23 @@ if ( ! function_exists('ppnl_newsletter_item') ) {
         function ppnl_newsletter_item() {
 
                 $labels = array(
-                        'name'                => _x( 'Nieuwsbrief item', 'Post Type General Name', 'ppnl' ),
-                        'singular_name'       => _x( 'Nieuwsbrief item', 'Post Type Singular Name', 'ppnl' ),
-                        'menu_name'           => __( 'Nieuwsbrief items', 'ppnl' ),
-                        'parent_item_colon'   => __( 'Parent....', 'ppnl' ),
-                        'all_items'           => __( 'Alle Nieuwsbrief items', 'ppnl' ),
-                        'view_item'           => __( 'Bekijk Nieuwsbrief item', 'ppnl' ),
-                        'add_new_item'        => __( 'Voeg nieuwsbrief item toe', 'ppnl' ),
-                        'add_new'             => __( 'Voeg nieuwsbrief item toe', 'ppnl' ),
-                        'edit_item'           => __( 'Bewerk nieuwsbrief item', 'ppnl' ),
-                        'update_item'         => __( 'Wijzig nieuwsbrief item', 'ppnl' ),
-                        'search_items'        => __( 'Zoek nieuwsbrief items', 'ppnl' ),
-                        'not_found'           => __( 'Geen nieuwsbrief items gevonden', 'ppnl' ),
-                        'not_found_in_trash'  => __( 'Geen nieuwsbrief items gevonden in prullenbak', 'ppnl' ),
+                        'name'                => _x( 'Newsletter item', 'Post Type General Name', 'ppnl' ),
+                        'singular_name'       => _x( 'Newsletter item', 'Post Type Singular Name', 'ppnl' ),
+                        'menu_name'           => __( 'Newsletter items', 'ppnl' ),
+                        'parent_item_colon'   => __( 'Parent', 'ppnl' ),
+                        'all_items'           => __( 'All newsletter items', 'ppnl' ),
+                        'view_item'           => __( 'View newsletter item', 'ppnl' ),
+                        'add_new_item'        => __( 'Add new newsletter item', 'ppnl' ),
+                        'add_new'             => __( 'New newsletter item', 'ppnl' ),
+                        'edit_item'           => __( 'Edit newsletter item', 'ppnl' ),
+                        'update_item'         => __( 'Update newsletter item', 'ppnl' ),
+                        'search_items'        => __( 'Search newsletter items', 'ppnl' ),
+                        'not_found'           => __( 'No newsletter items found', 'ppnl' ),
+                        'not_found_in_trash'  => __( 'No newsletter items found in trash', 'ppnl' ),
                 );
 		$args = array(
-                        'label'               => __( 'Nieuwsbrief item', 'ppnl' ),
-                        'description'         => __( 'Nieuwsbrief items voor in de nieuwsbrief', 'ppnl' ),
+                        'label'               => __( 'Newsletter item', 'ppnl' ),
+                        'description'         => __( 'Newsletter items for use with the <a href="http://www.thenewsletterplugin.com/" target="_blank">newsletter plugin</a>', 'ppnl' ),
                         'labels'              => $labels,
                         'supports'            => array( 'title', 'editor', 'thumbnail', 'post-attributes', 'tags'),
                         'hierarchical'        => false,
@@ -118,7 +118,7 @@ if ( ! function_exists('ppnl_newsletter_item') ) {
                         'exclude_from_search' => true,
                         'publicly_queryable'  => false,
                         'capability_type'     => 'post',
-			'taxonomies' => array('post_tag')
+						'taxonomies' => array('post_tag')
                 );
                 register_post_type( 'newsletter_item', $args );
 

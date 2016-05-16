@@ -150,7 +150,7 @@ function ppnl_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 
-	register_widget( 'WijZijn_Widget' );
+	register_widget( 'WeAre_Widget' );
 
 }
 add_action( 'widgets_init', 'ppnl_widgets_init' );
@@ -377,7 +377,7 @@ if ( ! function_exists( 'ppnl_custom_wp_trim_excerpt' ) ) :
 	        }
 	        $wpse_excerpt = trim(force_balance_tags($excerptOutput));
 	        $excerpt_end = '<a href="'. esc_url( get_permalink() ) . '" title="' . sprintf(__( 'Continue reading %s', 'ppnl' ), get_the_title()) .' ">' .
-				sprintf(__( 'Continue reading', 'ppnl' )) . ' -></a>';
+			sprintf(__( 'Continue reading', 'ppnl' )) . ' -></a>';
 	        $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
 	        //$pos = strrpos($wpse_excerpt, '</');
 	        //if ($pos !== false)
@@ -418,16 +418,16 @@ add_filter('loop_shop_per_page', 'show_products_per_page' );
 /**
  * Adds Foo_Widget widget.
  */
-class WijZijn_Widget extends WP_Widget {
+class WeAre_Widget extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
 	 */
 	function __construct() {
 		parent::__construct(
-			'wijzijn_widget', // Base ID
-			__( 'Wij zijn ...', 'ppnl' ), // Name
-			array( 'description' => __( 'Wij Zijn ... widget', 'ppnl' ), ) // Args
+			'WeAre_Widget', // Base ID
+			__( 'We are', 'ppnl' ), // Name
+			array( 'description' => __( 'We Are widget', 'ppnl' ), ) // Args
 		);
 	}
 
@@ -456,7 +456,7 @@ class WijZijn_Widget extends WP_Widget {
 		}
 
 		echo $args['before_widget'];
-		echo '<span>Wij zijn</span> een politieke beweging met de kernpunten:' . $content;
+		echo '<span>' . __( 'We are', 'ppnl' ) . '</span> ' . __('a political partij with main goals', 'ppnl' ) . ':' . $content;
 		echo $args['after_widget'];
 	}
 
@@ -467,11 +467,12 @@ class WijZijn_Widget extends WP_Widget {
 	 *
 	 * @param array $instance Previously saved values from database.
 	 */
+
 	public function form( $instance ) {
 		?>
 		<p>
-		<?php echo __('Laat onderstaande veld leeg om de landelijke standaard tekst te tonen','ppnl'); ?>
-		<label for="<?php echo $this->get_field_id( 'content' ); ?>"><?php _e( 'Content:' ); ?></label>
+		<?php echo __('Leave the field empty to show the default tekst','ppnl'); ?>
+		<label for="<?php echo $this->get_field_id( 'content' ); ?>"><?php _e( 'Content' ); ?>:</label>
 		<?php wp_editor( $instance['content'], $this->get_field_id( 'content' ),
 				array(	'textarea_name' => $this->get_field_name( 'content' ),
 					'media_buttons' => false,
@@ -497,7 +498,7 @@ class WijZijn_Widget extends WP_Widget {
 		return $instance;
 	}
 
-} // class WijZijn_Widget
+} // class WeAre_Widget
 
 /**
  * The Disable Google Fonts Plugin
@@ -521,7 +522,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 class Disable_Google_Fonts {
 	/**
 	 * Hook actions and filters.
-	 * 
+	 *
 	 * @since 1.0
 	 * @access public
 	 */

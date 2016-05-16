@@ -18,14 +18,14 @@
 				 <span class="author vcard">
 				 	<a class="url fn n" href="%7$s" title="%8$s" rel="author">%9$s</a>
 				 </span>',
-			__('Gepubliceerd op', 'ppnl' ),
-			__('door', 'ppnl' ),
+			__('Published on', 'ppnl' ),
+			__('by', 'ppnl' ),
 			esc_url( get_permalink() ),
 			esc_attr( get_the_time() ),
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() ),
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'Toon alle artikelen door %s', 'ppnl' ), get_the_author() ) ),
+			esc_attr( sprintf( __( 'Show all articles for %s', 'ppnl' ), get_the_author() ) ),
 			get_the_author()
 		);
 
@@ -33,14 +33,14 @@
 		<span class="sep"> | </span>
 		<span class="comments-link">
 			<?php
-				comments_popup_link('<span class="leave-reply">' . __( 'Reageren', 'ppnl' ) . '</span>',
-									'<strong>1</strong> ' . __( 'reactie', 'ppnl' ),
-									'<strong>%</strong> ' . __( 'reacties', 'ppnl' )
+				comments_popup_link('<span class="leave-reply">' . __( 'Leave comment', 'ppnl' ) . '</span>',
+									'<strong>1</strong> ' . __( 'comment', 'ppnl' ),
+									'<strong>%</strong> ' . __( 'comments', 'ppnl' )
 				);
 			?>
 		</span>
 		<?php
 	}
-	edit_post_link( __( 'Bewerken', 'ppnl' ), '<span class="sep"> | </span><span class="edit-link label">', '</span>' );
+	edit_post_link( __( 'Edit', 'ppnl' ), '<span class="sep"> | </span><span class="edit-link label">', '</span>' );
 ?>
 </div><!-- .author-info -->
