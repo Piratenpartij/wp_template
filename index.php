@@ -44,7 +44,7 @@ get_header(); ?>
 				    </div>
 				<?php endif; ?>
 			<?php endif; ?>
-			<div class="news-header">Nieuwste artikelen van de <?= bloginfo('name'); ?></div>
+			<div class="news-header"><?php echo sprintf(__('Latest articles off the %s','ppnl'),get_blog_details(get_current_blog_id())->blogname) ?></div>
 		<?php if ( have_posts() ) : ?>
 			<?php if ( is_home() && ! is_front_page() ) : ?>
 				<header>

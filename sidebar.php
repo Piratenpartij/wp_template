@@ -10,10 +10,10 @@ if ( is_active_sidebar( 'sidebar_right' )  ) : ?>
 	<div id="secondary" class="secondary">
 		<div class="join-donate">
 			<span class="button orange">
-				<a class="icon group" title="Word lid" href="https://lidworden.piratenpartij.nl">Word lid</a>
+				<a class="icon group" title="<?php _e('Signup','ppnl') ?>" href="https://lidworden.piratenpartij.nl"><?php _e('Signup','ppnl') ?></a>
 			</span>
 			<span class="button red">
-				<a class="icon doneren" title="Doneren" href="https://piratenpartij.nl/doneren">Doneren</a>
+				<a class="icon doneren" title="<?php _e('Donate','ppnl') ?>" href="https://piratenpartij.nl/doneren"><?php _e('Donate','ppnl') ?></a>
 			</span>
 		</div>
 		<?php if ( is_active_sidebar( 'sidebar_right' ) ) : ?>
