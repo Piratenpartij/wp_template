@@ -133,6 +133,25 @@ q:after {
 	content: "";
 }
 
+table.quote {
+  width: 30% !important;
+}
+
+.quote {
+  max-width: 30%;
+  table-layout: auto;
+  opacity: 0.6;
+  margin: 0em 0.5em 0em 0.3em !important;
+}
+
+.quote th {
+  font-size: 0.9em;
+}
+
+.quote td {
+  font-size: 0.7em;
+}
+
 blockquote,
 q {
 	-webkit-hyphens: none;
@@ -1774,7 +1793,7 @@ body .ai1ec-agenda-widget-view h3.ai1ec-date-title {
 	width: 100%;
 }
 
-.site-content .secondary aside {
+.site-content .secondary aside, .quote {
   margin: 0 0 1em 0;
   padding: 0px 0.5em 0.5em 0.5em;
   background-color: #EFEFEF;
@@ -1813,7 +1832,7 @@ body .ai1ec-agenda-widget-view h3.ai1ec-date-title {
   font-family: "Droid Sans",arial,helvetica,geneva,tahoma,georgia,verdana,sans-serif,courier;
 }
 
-.site-content .secondary .widget_weare_widget {
+.site-content .secondary .widget_weare_widget, .quote {
   background-image: linear-gradient(top, #876FA1, #572B85);
   background-image: -moz-linear-gradient(top, #876FA1, #572B85);
   background-image: -ms-linear-gradient(top, #876FA1, #572B85);
