@@ -1,18 +1,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Piratenpartij Nederland Wordpress\n"
-"POT-Creation-Date: 2016-05-16 20:27+0200\n"
-"PO-Revision-Date: 2016-05-16 20:28+0200\n"
+"POT-Creation-Date: 2016-06-11 12:35+0200\n"
+"PO-Revision-Date: 2016-06-11 12:36+0200\n"
 "Last-Translator: Joshua (TheYOSH) Rubingh <theyosh@piratenpartij.nl>\n"
 "Language-Team: ICT <ict@piratenpartij.nl>\n"
-"Language: nl\n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.8\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-KeywordsList: __;_e;_x;_nx;_n\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: 404.php:17
@@ -67,6 +68,16 @@ msgstr "reacties"
 #: content-search.php:28 content-search.php:33 image.php:71
 msgid "Edit"
 msgstr "Bewerken"
+
+#: comments.php:28
+#, php-format
+msgid "One comment on &ldquo;%2$s&rdquo;"
+msgstr "Eén reactie op \"%2$s\""
+
+#: comments.php:28
+#, php-format
+msgid "%1$s comments on &ldquo;%2$s&rdquo;"
+msgstr "%1$s reacties op \"%2$s\""
 
 #: comments.php:53
 msgid "Comments are closed."
