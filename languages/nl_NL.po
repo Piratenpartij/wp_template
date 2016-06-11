@@ -71,12 +71,12 @@ msgstr "Bewerken"
 
 #: comments.php:28
 #, php-format
-msgid "One comment on &ldquo;%2$s&rdquo;"
+msgid "One comment on \"%2$s\""
 msgstr "Eén reactie op \"%2$s\""
 
 #: comments.php:28
 #, php-format
-msgid "%1$s comments on &ldquo;%2$s&rdquo;"
+msgid "%1$s comments on \"%2$s\""
 msgstr "%1$s reacties op \"%2$s\""
 
 #: comments.php:53
