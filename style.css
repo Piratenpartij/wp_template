@@ -1618,7 +1618,7 @@ body .ai1ec-agenda-widget-view h3.ai1ec-date-title {
 	margin-right: 0px;
 }
 
-.promotion .item img {
+.promotion .item > img {
 	position: absolute;
 	z-index: 1;
 	top: 0px;
