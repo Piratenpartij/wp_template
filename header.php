@@ -17,7 +17,6 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link rel="shortcut icon" href="<?= ppnl_header_image(); ?>"/>
 	<link rel="image_src" href="<?= ppnl_header_image(); ?>"/>
-	<script type="text/javascript" src="/wp-content/themes/ppnl/ym.js"></script>
 	<!--[if lt IE 9]>
 	<script src="<?= esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
 	<![endif]-->
