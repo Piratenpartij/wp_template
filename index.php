@@ -22,7 +22,7 @@ get_header(); ?>
 				      	'post_type' => 'promo',
 				      	'orderby' => 'menu_order',
 						'order'   => 'ASC',
-						'posts_per_page' => 3,
+						'posts_per_page' => 4,
 				    ) );
 				    if( $promotion_banners->have_posts() ) : ?>
 				    <div class="promotion">
