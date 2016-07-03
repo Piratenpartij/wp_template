@@ -10,6 +10,10 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+   <?php if (!is_single() && is_sticky()) {
+	   echo '<img class="pin" src="' . get_template_directory_uri() . '/images/pin.png" alt="Stikcy post pin" title="' . __('Sticky post' , 'ppnl') . '"/>';
+         }
+   ?>
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) :
