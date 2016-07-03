@@ -1,4 +1,9 @@
 <?php
+
+echo "De foto generator is tijdelijk buitenwerking gesteld.";
+exit;
+
+
 $gOverlayLocation = 'overlays';
 $gValidImages = array('png' => 3,'jpg' => 2, 'gif' => 1);
 $gMaxMegaPixel = 9000000;
@@ -6,11 +11,12 @@ $gMaxMegaPixel = 9000000;
 function scanOverlayImages() {
 	global $gOverlayLocation, $gValidImages;
 	$lImageList = array();
+        $lValidImages = array_keys($gValidImages);
 	$directory = new DirectoryIterator($gOverlayLocation);
 	foreach ($directory as $fileinfo) {
 	    if ($fileinfo->isFile()) {
 	        $extension = strtolower(pathinfo($fileinfo->getFilename(), PATHINFO_EXTENSION));
-	        if (in_array($extension, array_keys($gValidImages))) {
+	        if (in_array($extension, $lValidImages)) {
 	            $lImageList[] = $fileinfo->getFilename();
 	        }
 	    }
@@ -159,6 +165,7 @@ function processImages($pPhoto, $pOverlay, $pOverlayPosition = 'rb', $pOverlaySi
 			width: 75px;
 			height: 75px;
 			margin-right: 5px;
+                        margin-top: 5px;
 			position: relative;
                         border: solid 1px #876fa1;
 		}
