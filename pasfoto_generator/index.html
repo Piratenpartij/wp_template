@@ -1,6 +1,6 @@
 <html>
 <head>
-        <!--
+  <!--
 		Free Pirateparty photo generator v1.0
 		Made by Joshua (TheYOSH) Rubingh for Piratenpartij Nederland - 10 Septs 2016
 
@@ -12,7 +12,7 @@
 	<script type="text/javascript">
 		// Setup
 		var pasfoto_source = new Image(), pasfoto_overlay = new Image(), pp_canvas = null;
-		var pp_max_width = 400, pp_max_height = 600, padding = 5;
+		var pp_max_width = 400, pp_max_height = 500, padding = 5, rotation = 0;
 
 		$(document).ready(function(){
 			styleMe();
@@ -46,30 +46,29 @@
 
 			// Listener for new image
 			document.getElementById('pasfoto').addEventListener('change', handleFileSelect, false);
-
+			// Listener for image rotations
+			document.getElementById("rotate").addEventListener('click', rotate_image, false);
+			// Listener for download action
 			document.getElementById("dl").addEventListener('click', download_pasfoto, false);
 		});
 
+		function rotate_image() {
+			// Rotate image wit 90 degrees per step.
+			rotation = rotation + 90;
+			rotation = rotation % 360;
+
+			// Generate the new photo
+			generate_pasfoto();
+		}
+
 		// Borrowed from: http://stackoverflow.com/questions/13073647/crop-canvas-export-html5-canvas-with-certain-width-and-height#13074780
 		function generate_pasfoto() {
-			// Scaling.... with hidden canvas
 			pp_canvas = document.getElementsByTagName("canvas")[0];
+			// Initialize the image such as rotation and scaling..
+			initialize_pasfoto();
+
+			// Here we add the image overlay
 			var pp_context = pp_canvas.getContext("2d");
-			var scale_width = 0, scale_height = 0, scale = 0;
-			scale_width = pp_max_width / pasfoto_source.width;
-			scale_height = pp_max_height / pasfoto_source.height;
-			scale = (scale_width < scale_height ? scale_width : scale_height);
-
-			// Set the new canvas size
-			pp_canvas.width = scale * pasfoto_source.width;
-			pp_canvas.height = scale * pasfoto_source.height;
-
-			// Clear old content
-			pp_context.clearRect(0, 0, pp_canvas.width, pp_canvas.height);
-
-			// Draw new image scaled up/down
-			pp_context.drawImage(pasfoto_source, 0, 0, pp_canvas.width, pp_canvas.height);
-
 			// Load overlay image
 			if ($('div.overlay.checked').length == 1) {
 				pasfoto_overlay.src = $('div.overlay.checked img').attr('src');
@@ -82,22 +81,58 @@
 							break;
 
 						case 'rt':
-							xpos = scale * pasfoto_source.width - (pasfoto_overlay.width + padding);
+							xpos = pp_canvas.width - (pasfoto_overlay.width + padding);
 							break;
 
 						case 'lb':
-							ypos = scale * pasfoto_source.height - (pasfoto_overlay.height + padding);
+							ypos = pp_canvas.height - (pasfoto_overlay.height + padding);
 							break;
 
 						case 'rb':
-							xpos = scale * pasfoto_source.width - (pasfoto_overlay.width + padding);
-							ypos = scale * pasfoto_source.height - (pasfoto_overlay.height + padding);
+							xpos = pp_canvas.width - (pasfoto_overlay.width + padding);
+							ypos = pp_canvas.height - (pasfoto_overlay.height + padding);
 							break;
 					}
 				}
 				// Draw the overlay on the main image on selected position
 				pp_context.drawImage(pasfoto_overlay, xpos, ypos, pasfoto_overlay.width, pasfoto_overlay.height);
 			}
+		}
+
+		// Borrowed from: https://stackoverflow.com/questions/17411991/html5-canvas-rotate-image
+		function initialize_pasfoto() {
+			// Rotation
+			var tempCanvas = document.createElement("canvas");
+			var pp_context = tempCanvas.getContext("2d");
+
+			if(rotation == 90 || rotation == 270) {
+					tempCanvas.width = pasfoto_source.height;
+					tempCanvas.height = pasfoto_source.width;
+			} else {
+					tempCanvas.width = pasfoto_source.width;
+					tempCanvas.height = pasfoto_source.height;
+			}
+
+			pp_context.clearRect(0,0,tempCanvas.width,tempCanvas.height);
+			if(rotation == 90 || rotation == 270) {
+					pp_context.translate(pasfoto_source.height/2,pasfoto_source.width/2);
+			} else {
+					pp_context.translate(pasfoto_source.width/2,pasfoto_source.height/2);
+		  }
+			pp_context.rotate(rotation*Math.PI/180);
+			pp_context.drawImage(pasfoto_source,-pasfoto_source.width/2,-pasfoto_source.height/2);
+
+			// Scaling up / down....
+			var scale_width = 0, scale_height = 0, scale = 0;
+			scale_width = pp_max_width / tempCanvas.width;
+			scale_height = pp_max_height / tempCanvas.height;
+			scale = (scale_width < scale_height ? scale_width : scale_height);
+
+			pp_canvas.width = scale * tempCanvas.width;
+			pp_canvas.height = scale * tempCanvas.height;
+
+			pp_context = pp_canvas.getContext("2d");
+			pp_context.drawImage(tempCanvas,0,0,pp_canvas.width,pp_canvas.height);
 		}
 
 		// Borrowed from: http://stackoverflow.com/questions/12796513/html5-canvas-to-png-file/12796748
@@ -157,8 +192,6 @@
 				}
 			}
 		}
-
-
 	</script>
 	<style>
 		body {
@@ -182,11 +215,11 @@
 
 		table.wrapper td.result {
 			padding-left: 5px;
-			border-left: solid 2px purple;
+			border-left: solid 2px #876fa1;
 		}
 
 		div.overlay {
-			border: solid 1px purple;
+			border: solid 1px #876fa1;
 			float: left;
 			width: 75px;
 			height: 75px;
@@ -198,7 +231,7 @@
 		div.overlay.checked,
 		table.position td:hover,
 		table.position td.checked {
-			background-color: purple;
+			background-color: #876fa1;
 		}
 
 		div.overlay input {
@@ -213,7 +246,7 @@
 		}
 
 		table.position {
-			border: solid 1px purple;
+			border: solid 1px #876fa1;
 			width: 200px;
 			height: 200px;
 			margin: 0px 0px 0px 0px;
@@ -222,24 +255,24 @@
 		table.position td {
 			vertical-align: middle;
 			text-align: center;
-			border: solid 1px purple;
+			border: solid 1px #876fa1;
 		}
 
 		table.position input {
 			visibility: hidden;
 		}
 
-a.download_button {
+		a.download_button {
 			appearance: button !important;
 			-moz-appearance: button !important;
 			-webkit-appearance: button !important;
 			text-decoration: none !important;
+
 			color: white !important;
-			border: solid 1px purple;
-			padding: 15px;
-                        position: fixed;
-			background-color: purple;
-			
+			border: solid 1px #876fa1;
+			padding: 0.6em;
+			position: fixed;
+			background-color: #876fa1;
 		}
 	</style>
 </head>
@@ -250,6 +283,9 @@ a.download_button {
 				<td style="width:40%">
 					<h2>1. Selecteer pasfoto</h2>
 					<input type="file" name="pasfoto" id="pasfoto">
+					<br />
+					<input type="button" value="draai" id="rotate">
+
 				</td>
 				<td rowspan="5" class="result">
 				    <h2>Preview</h2>
@@ -281,12 +317,11 @@ a.download_button {
 			</tr>
 			<tr>
 				<td>
-				  <h2>4. Download!</h2>
-					<a href="#" class="download_button" id="dl" download="Piratenpartij_pasfoto.png">Piratenpartij pasfoto</a>
+				  <h2>4. Sla op!</h2>
+					<a href="#" class="download_button" id="dl" download="Piratenpartij_pasfoto.png" target="_blank">Piratenpartij pasfoto</a>
 				</td>
 			</tr>
 		</table>
 	</form>
 </body>
 </html>
-
