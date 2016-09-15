@@ -549,7 +549,7 @@ button-blue:active, .button-blue:focus{color:white !important;border:solid 1px;b
 .secondary.toggled-on{border-top:1px solid transparent;border-bottom:1px solid transparent;display:block;}
 .site-footer{padding:30px 0px;text-align:center;}
 .site-footer ul{list-style:outside none none;width:70%;margin:0px auto;height:10px;}
-.site-footer ul li{float:left;width:25%;text-align:center;}
+.site-footer ul li{float:left;width:33%;text-align:center;}
 .hentry{position:relative;padding:0.2em}
 .site .avatar,
 .thumbnail{display:block;padding:4px;line-height:20px;border:1px solid #ddd;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.055);-moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.055);box-shadow:0 1px 3px rgba(0, 0, 0, 0.055);-webkit-transition:all 0.2s ease-in-out;-moz-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;}
