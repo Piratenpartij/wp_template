@@ -444,14 +444,10 @@ class WeAre_Widget extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) {
 		$content = '<ul>
-				<li><a href="https://programma.piratenpartij.nl/burgerparticipatie_en_open_overheid">Burgerparticipatie en open overheid</a></li>
-				<li><a href="https://programma.piratenpartij.nl/transparantie">Transparantie</a></li>
-				<li><a href="https://programma.piratenpartij.nl/privacy_en_burgerrechten">Privacy en burgerrechten</a></li>
-				<li><a href="https://programma.piratenpartij.nl/auteursrecht">Auteursrecht</a></li>
-				<li><a href="https://programma.piratenpartij.nl/vrijheid_van_informatie_en_onderwijs">Vrijheid van informatie en onderwijs</a></li>
-				<li><a href="https://programma.piratenpartij.nl/patenten">Patenten</a></li>
-				<li><a href="https://programma.piratenpartij.nl/internationale_handel">Internationale handel</a></li>
-				<li><a href="https://programma.piratenpartij.nl/net-politiek">Net-politiek</a></li>
+				<li><a href="https://programma.piratenpartij.nl/kernpunten#burgerrechten">Burgerrechten</a></li>
+				<li><a href="https://programma.piratenpartij.nl/kernpunten#overheidopen_inzichtelijk_en_efficient">Open en inzichtelijke overheid</a></li>
+				<li><a href="https://programma.piratenpartij.nl/kernpunten#democratie_en_invloed_burger">Democratie en invloed burger</a></li>
+				<li><a href="https://programma.piratenpartij.nl/kernpunten#vrijheid_van_informatie">Vrijheid van informatie</a></li>
 			</ul>';
 
 		if (!empty($instance['content']) && !in_array(trim($instance['content']),array('','<p></p>','<br>','<br />','<br/>'))) {
