@@ -1,0 +1,86 @@
+/*
+		Free Pirateparty photo generator v1.1
+		Made by Joshua (TheYOSH) Rubingh for Piratenpartij Nederland - 10 Sept 2016
+
+		This script uses the latest HTML5 techniques for offline file reading and manipulation.
+		No data is uploaded to the server. All graphical calculation is done in the local browser.
+*/
+
+h2 {
+	margin-top: 10px !important;
+  clear: both;
+}
+
+.generator_menu {
+  float: left;
+  width: 40%;
+}
+
+.generator_preview {
+  float: right;
+  width: 60%;
+}
+
+div.overlay {
+  border: solid 1px #876fa1;
+  float: left;
+  width: 75px;
+  height: 75px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+div.overlay:hover,
+div.overlay.checked,
+table.position td:hover,
+table.position td.checked {
+  background-color: #876fa1;
+}
+
+div.overlay input {
+  visibility: hidden;
+}
+
+div.overlay img {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+table.position {
+  border: solid 1px #876fa1;
+  width: 200px;
+  height: 200px;
+  margin: 0px 0px 0px 0px;
+}
+
+table.position td {
+  vertical-align: middle;
+  text-align: center;
+  border: solid 1px #876fa1;
+}
+
+table.position input {
+  visibility: hidden;
+}
+
+a.download_button {
+  appearance: button !important;
+  -moz-appearance: button !important;
+  -webkit-appearance: button !important;
+  text-decoration: none !important;
+
+  color: white !important;
+  border: solid 1px #876fa1;
+  padding: 0.6em;
+  background-color: #876fa1;
+}
+
+@media screen and (max-width:900px) {
+  .generator_menu,
+  .generator_preview {
+    width: 100%;
+  }
+}
