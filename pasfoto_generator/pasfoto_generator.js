@@ -1,5 +1,5 @@
 /*
-		Free Pirateparty photo generator v1.1
+		Free Pirateparty photo generator v1.2
 		Made by Joshua (TheYOSH) Rubingh for Piratenpartij Nederland - 10 Sept 2016
 
 		This script uses the latest HTML5 techniques for offline file reading and manipulation.
@@ -12,10 +12,13 @@ var pasfoto_source = new Image(),
     pp_canvas = null,
     pp_max_width = 400,
     pp_max_height = 500,
-    padding = 5,
+    defaultpadding = 5,
     rotation = 0,
-    overlay_images = new Array('piratenpartij_nederland_logo_zwart2.png','piratenpartij_nederland_logo_zwart.png','piratenpartij_nederland_logo_wit.png');
+    basepath = '/',
+    overlay_images = new Array('purple_bar1.png','piratenpartij_nederland_logo_zwart2.png','piratenpartij_nederland_logo_zwart.png','piratenpartij_nederland_logo_wit.png');
 
+basepath = '/wp-content/themes/ppnl/pasfoto_generator/';
+//basepath = '';
 // Load the canvas loader listen for new images
 pasfoto_source.onload = function() {
   rotation = 0;
@@ -33,7 +36,7 @@ jQuery(document).ready(function(){
   document.getElementById("dl").addEventListener('click', download_pasfoto, false);
 
   // Load initial free image
-  pasfoto_source.src = 'https://piratenpartij.nl/wp-content/uploads/2016/06/Headshot_Ancilla_Marco_Edelman_Wit-.jpg';
+  pasfoto_source.src = basepath + 'pasfoto.jpg';
 });
 
 function rotate_image() {
@@ -47,6 +50,7 @@ function rotate_image() {
 
 // Borrowed from: http://stackoverflow.com/questions/13073647/crop-canvas-export-html5-canvas-with-certain-width-and-height#13074780
 function generate_pasfoto() {
+  padding = defaultpadding;
   pp_canvas = document.getElementsByTagName("canvas")[0];
   pp_canvas.width = pp_max_width;
   pp_canvas.height = pp_max_height;
@@ -58,6 +62,9 @@ function generate_pasfoto() {
   // Load overlay image
   if (jQuery('div.overlay.checked').length == 1) {
     pasfoto_overlay.src = jQuery('div.overlay.checked img').attr('src');
+    if (pasfoto_overlay.src.indexOf('purple_bar') >= 0) {
+      padding = 0;
+    }
     var xpos = padding, ypos = padding;
     // Check for selected position
     if (jQuery('table.position td.checked').length == 1) {
@@ -186,13 +193,13 @@ function load_app() {
   div3.append(jQuery('<h2>').text('2. Selecteer logo'));
 
   jQuery.each(overlay_images,function(index,value){
-    div3.append(jQuery('<div>').addClass('overlay' + (index === 0 ? ' checked' : '')).append(jQuery('<img>').attr({src: '/wp-content/themes/ppnl/pasfoto_generator/overlays/' + value})));
+    div3.append(jQuery('<div>').addClass('overlay' + (index === 0 ? ' checked' : '')).append(jQuery('<img>').attr({src: basepath + 'overlays/' + value})));
   });
 
   div3.append(jQuery('<h2>').text('3. Selecteer positie'));
   div3.append('<table class="position"><tr><td id="lt"></td><td id="rt"></td></tr><tr><td id="lb"></td><td class="checked" id="rb"></td></tr></table>');
   div3.append(jQuery('<h2>').text('4. Sla op!'));
-  div3.append(jQuery('<a>').addClass('download_button').attr({id:'dl',download:'Piratenpartij_pasfoto.png', target:'_blank'}).text('Piratenpartij pasfoto'));
+  div3.append(jQuery('<a>').addClass('download_button').attr({id:'dl', href:'#', download:'Piratenpartij_pasfoto.png', target:'_blank'}).text('Piratenpartij pasfoto'));
   jQuery('div#pasfoto_generator').append(div3);
 
   jQuery('div.overlay').on('click',function(){
@@ -207,3 +214,5 @@ function load_app() {
     generate_pasfoto();
   });
 }
+
+

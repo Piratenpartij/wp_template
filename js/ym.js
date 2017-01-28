@@ -225,10 +225,10 @@ function ymInterfaceStationChanged() {
 
 
 function ymInit(station, bitrate, autoplay) {
+alert('11');
    if (ymIsBlackBerry()) {
 	return;
    }
-
    ymStation = station;
    ymBitrate = bitrate;
    ymAutoPlay = autoplay;
@@ -240,7 +240,7 @@ function ymInit(station, bitrate, autoplay) {
    if (document.getElementById('ym_volume')) {
      document.getElementById('ym_volume').onchange = ymInterfaceVolumeChanged;
    }
-   if (ymGetFlashMajorVersion() < 9 && !ymIsFixedFlashBrowser()) {
+//   if (ymGetFlashMajorVersion() < 9 && !ymIsFixedFlashBrowser()) {
      if (myAudio.canPlayType) {
         if (!!myAudio.canPlayType && "" !== myAudio.canPlayType('audio/ogg; codecs="vorbis"')) {
             ymMode = 'html5';
@@ -250,7 +250,8 @@ function ymInit(station, bitrate, autoplay) {
             ymMode = 'html5';
         }
      }
-   }
+//   }
+console.log(ymMode);
    if (ymMode == 'flash') {          
            ymFlashElement = document.createElement('div');
 	   if (document.getElementById('ym_flash')) {
@@ -420,3 +421,5 @@ function ymGetUrl() {
   
        return url;
 }
+
+
