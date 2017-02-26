@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'BPdotsSquares';
+  src: url('../fonts/BPdotsSquares.eot?#iefix') format('embedded-opentype'), url('../fonts/BPdotsSquares.woff') format('woff'), url('../fonts/BPdotsSquares.ttf')  format('truetype'), url('../fonts/BPdotsSquares.svg#BPdots') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+#lubachgenerator {
+    position: relative;
+    max-width: 1280px;
+    font-family: BPdotsSquares;
+}
+#lubachgenerator img.background {
+    margin: 0px;
+    width: 100%;
+}
+.baloon {
+    position: absolute;
+    width: 31%;
+    height: 36%;
+    color: black;
+    font-size: 3vw;
+    line-height: 2.6vw;
+    padding: 2px;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+}
+.baloon .meme {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+#lubach.baloon,
+#ancilla.baloon{
+    left: 36%;
+    top: 11%;
+}
+#ancilla.baloon {
+    top: 55%;
+}
+#generator_button {
+    position: absolute;
+/*    width: 17%;*/
+    height: 25%;
+    right: 7%;
+    bottom: 1%;
+    z-index: 99;
+    cursor: pointer;   
+}
+#ooglapje {
+    position: absolute;
+    z-index: 999;
+    top: 22%;
+    left: 73%;
+    width: 16%;
+}
+@-webkit-keyframes glow {
+    to {
+         border-color: #3f0e86;
+    -webkit-box-shadow: 0 0 5px #3f0e86;
+       -moz-box-shadow: 0 0 5px #3f0e86;
+            box-shadow: 0 0 5px #3f0e86;
+    }
+}
+.glow {
+    border: 3px solid transparent;
+    -webkit-animation: glow 2.0s infinite alternate;  
+    -webkit-transition: border 2.0s linear, box-shadow 2.0s linear;
+       -moz-transition: border 2.0s linear, box-shadow 2.0s linear;
+            transition: border 2.0s linear, box-shadow 2.0s linear;
+}
