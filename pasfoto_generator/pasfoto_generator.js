@@ -26,6 +26,7 @@ pasfoto_source.onload = function() {
 };
 
 jQuery(document).ready(function(){
+  jQuery('head').append('<link href="' + basepath + 'pasfoto_generator.css" rel="stylesheet" id="pasfoto_generator_css" />');
   load_app();
 
   // Listener for new image
@@ -199,7 +200,12 @@ function load_app() {
   div3.append(jQuery('<h2>').text('3. Selecteer positie'));
   div3.append('<table class="position"><tr><td id="lt"></td><td id="rt"></td></tr><tr><td id="lb"></td><td class="checked" id="rb"></td></tr></table>');
   div3.append(jQuery('<h2>').text('4. Sla op!'));
-  div3.append(jQuery('<a>').addClass('download_button').attr({id:'dl', href:'#', download:'Piratenpartij_pasfoto.png', target:'_blank'}).text('Piratenpartij pasfoto'));
+  var downloadLink = jQuery('<a>').addClass('download_button').attr({id:'dl', href:'#', target:'_blank'}).text('Piratenpartij pasfoto');
+  if ( ! /Android/i.test(navigator.userAgent) ) {
+    downloadLink.attr({download:'Piratenpartij_pasfoto.png'});
+  }
+  div3.append(downloadLink);
+//  div3.append(jQuery('<a>').addClass('download_button').attr({id:'dl', href:'#', download:'Piratenpartij_pasfoto.png', target:'_blank'}).text('Piratenpartij pasfoto'));
   jQuery('div#pasfoto_generator').append(div3);
 
   jQuery('div.overlay').on('click',function(){
