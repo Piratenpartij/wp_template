@@ -342,3 +342,39 @@ function ppnl_blog_name() {
 	echo $blog_name;
 }
 endif;
+
+
+#wp_oembed_remove_provider( 'http://www.youtube.com/oembed*' );
+
+wp_embed_register_handler(
+  'yt_nocookie',
+  '#https?://www\.youtube-nocookie\.com/embed/([^/]+)/?#i',
+  'wp_embed_handler_yt_nocookie'
+);
+
+function wp_embed_handler_yt_nocookie( $matches, $attr, $url, $rawattr )
+{
+
+//  print_r($matches);
+//  print_r($attr);
+
+    $embed = sprintf('<iframe src="https://www.youtube-nocookie.com/embed/%1$s" width="100%%" height="480" allowfullscreen="allowfullscreen"></iframe>',
+       esc_attr( $matches[1] ));
+
+  return apply_filters( 'embed_yt_nocookie', $embed, $matches, $attr, $url, $rawattr );
+}
+
+
+
+/*
+
+ '#http://((m|www)\.)?youtube\.com/watch.*#i'          => array( 'http://www.youtube.com/oembed',                             true  ),
+                        '#https://((m|www)\.)?youtube\.com/watch.*#i'         => array( 'http://www.youtube.com/oembed?scheme=https',                true  ),
+                        '#http://((m|www)\.)?youtube\.com/playlist.*#i'       => array( 'http://www.youtube.com/oembed',                             true  ),
+                        '#https://((m|www)\.)?youtube\.com/playlist.*#i'      => array( 'http://www.youtube.com/oembed?scheme=https',                true  ),
+                        '#http://youtu\.be/.*#i'                              => array( 'http://www.youtube.com/oembed',                             true  ),
+                        '#https://youtu\.be/.*#i'                             => array( 'http://www.youtube.com/oembed?scheme=https',                true  ),
+
+
+
+*/
